@@ -4,12 +4,12 @@ import Container from '@mui/material/Container';
 import { Box } from "@mui/system";
 import {TextField} from '@mui/material';
 import Button from "@mui/material/Button";
+import FooterTab from '../footer';
 //from antd
 import { UserOutlined } from '@ant-design/icons';
 import { Input } from 'antd'
 import { styles } from "./styles";
-import { Layout, Space } from 'antd';
-const { Footer } = Layout;
+
 export default function Login() {
   return (
     <>
@@ -35,7 +35,7 @@ export default function Login() {
         <br />
         <br />
         <br />
-        <Footer style={{ textAlign: 'center',minWidth:"100%" }}> All Rights Reserved © 2023 </Footer>
+       <FooterTab/>
        
      </Container>
     </>
