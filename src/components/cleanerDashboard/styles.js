@@ -15,7 +15,7 @@ export const styles = {
         // backgroundColor:"blue",
         backgroundColor:'rgb(13, 110, 253)',
         // backgroundColor:"rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important",
-        minHeight: "4rem",
+        minHeight: "43px",
         minWidth: "100%"
       },
       head: {
@@ -31,16 +31,4 @@ export const styles = {
     //   fontSize: "28px",
     // },
 },
-
-navbtn:{
-    backgroundcolor: "white",
-     color: "white",
-     fontSize:"0.8rem", 
-     textTransform: "none"
-},
-innernav:{
-    minWidth:"100%",
-    color:"white",
-    size:"2rem"
-}
 }
