@@ -13,7 +13,7 @@ const Navbar = ({ userRole }) => {
     switch (userRole) {
       case 'cleaner':
         return (
-          <div style={{display: "flex", justifyContent: "space-between", padding: "0.8rem",whiteSpace: "nowrap" }}>
+          <div style={styles.navContainer}>
     <Button style={styles.navbtn}>Home</Button>
     <Button style={styles.navbtn}>Logout</Button>
     </div>
@@ -21,7 +21,7 @@ const Navbar = ({ userRole }) => {
         );
         case 'manager':
           return (
-            <div style={{display: "flex", justifyContent: "space-between", padding: "0.8rem",whiteSpace: "nowrap" }}>
+            <div style={ styles.navContainer}>
     <Button style={styles.navbtn}>Grid Report</Button>
     <Button style={styles.navbtn}>History</Button>
     <Button style={styles.navbtn}>Reports</Button>
@@ -37,6 +37,19 @@ const Navbar = ({ userRole }) => {
 </div>
 
           );
+
+          case 'supervisor':
+            return (
+              <div style={styles.navContainer}>
+        <div>
+        <Button style={styles.navbtn}>Home</Button>
+        <Button style={styles.navbtn}>My Grid Report</Button>
+        <Button style={styles.navbtn}>Google Map</Button>
+    </div>
+        <Button style={styles.navbtn}>Logout</Button>
+        </div>
+             
+            );
           default:
             return null;
     }}
@@ -57,8 +70,8 @@ export default function NavTab() {
     <>
    
       <div style={styles.divider}>
-      <Navbar userRole={"cleaner"} />
-      {/* <div style={{display: "flex", justifyContent: "space-between", padding: "0.8rem",whiteSpace: "nowrap" }}>
+      <Navbar userRole={"supervisor"} />
+      {/* <div style={styles.navContainer}>
     <Button style={styles.navbtn}>Grid Report</Button>
     <Button style={styles.navbtn}>History</Button>
     <Button style={styles.navbtn}>Reports</Button>
