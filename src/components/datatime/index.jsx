@@ -13,6 +13,15 @@ export default function DateAndTime() {
         clearInterval(timerID);
       };
     }, []);
+
+    const getAmPm = (hours) => {
+      return hours >= 12 ? 'PM' : 'AM';
+    };
+  
+    // Function to format the hours in 12-hour format
+    const formatHours = (hours) => {
+      return hours % 12 || 12; // Convert 0 to 12 for midnight
+    };
   
     const dateTimeStyle = {
       textAlign: 'right',
@@ -28,7 +37,10 @@ export default function DateAndTime() {
   return (
     <div style={dateTimeStyle}>
       <p style={paragraphStyle}>{currentDate.toLocaleDateString()}</p>
-      <p style={paragraphStyle}>{currentDate.toLocaleTimeString()}</p>
+      {/* <p style={paragraphStyle}>{currentDate.toLocaleTimeString()}</p> */}
+      <p style={paragraphStyle}>
+        {formatHours(currentDate.getHours())}:{currentDate.getMinutes()}:{currentDate.getSeconds()} {getAmPm(currentDate.getHours())}
+      </p>
     </div>
     
   )

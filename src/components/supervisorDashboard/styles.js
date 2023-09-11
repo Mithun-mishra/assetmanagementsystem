@@ -10,26 +10,12 @@ export const styles = {
         marginTop:"0",
         minWidth: "80%"
       },
-      navContainer:{
-        display: "flex",
-         justifyContent: "space-between",
-          padding: "0.8rem",
-          whiteSpace: "nowrap"
-      },
-      responsiveStyles: {
-        '@media (max-width: 600px)': {
-          navContainer: {
-            flexDirection: 'column',
-            alignItems: 'center',
-          },
-        },
-      },
     divider: {
         minHeight:"5rem",
         // backgroundColor:"blue",
         backgroundColor:'rgb(13, 110, 253)',
         // backgroundColor:"rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important",
-        minHeight: "4rem",
+        minHeight: "43px",
         minWidth: "100%"
       },
       head: {
@@ -45,16 +31,4 @@ export const styles = {
     //   fontSize: "28px",
     // },
 },
-
-navbtn:{
-    backgroundcolor: "white",
-     color: "white",
-     fontSize:"0.8rem", 
-     textTransform: "none"
-},
-innernav:{
-    minWidth:"100%",
-    color:"white",
-    size:"2rem"
-}
 }
