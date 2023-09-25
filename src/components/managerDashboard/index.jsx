@@ -6,7 +6,6 @@ import FooterTab from '../footer';
 import NavTab from '../navbar';
 import { Divider } from 'antd';
 import DateAndTime from '../datatime';
-import { Divider } from 'antd';
 export default function ManagerDashboard() {
   return (
     <>
