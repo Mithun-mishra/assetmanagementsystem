@@ -4,6 +4,8 @@ import { Typography } from '@mui/material'
 import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import NavTab from '../navbar';
+import DateAndTime from '../datatime';
+import { Divider } from 'antd';
 export default function ManagerDashboard() {
   return (
     <>
@@ -11,12 +13,21 @@ export default function ManagerDashboard() {
      <Typography sx={styles.head}>Asset Management System - Kalinganagar </Typography>
 
         <NavTab/>
+        <div >
+        <DateAndTime/>
+        </div>
+        <Divider />
 
+          <Typography>Location</Typography>
+          
      <br />
         <br />
         <br />
         <br />
         <br />
+        <div>
+
+        </div>
        <FooterTab/>
       </Container>
       

@@ -1,6 +1,6 @@
 import React from "react";
 import { PlusOutlined } from "@ant-design/icons";
-import { Form, Button, Radio, Checkbox, Input, Upload } from "antd";
+import { Form, Button, Radio, Checkbox, Input, Upload , Space} from "antd";
 
 const options = [
   {
@@ -50,6 +50,38 @@ export default function CleanerForm({ houseId }) {
   return (
     <div>
       <Form
+       layout="vertical"
+       form={form}
+      //  onFinish={handleSubmit}
+       style={{
+         display: "flex",
+         flexDirection: "column",
+         margin:"0",
+       }}>
+        <Form.Item 
+        name='asset Id'
+        label={<span style={{ fontWeight: "bold" }}>Asset ID</span>}>
+          <Input style={{width:'40%',background:'#C7C7C8'}} placeholder="Other " />
+        </Form.Item>
+        <Form.Item 
+        name='asset Address'
+        label={<span style={{ fontWeight: "bold" }}>Asset Address</span>}>
+          <Input style={{width:'40%',background:'#C7C7C8'}} placeholder="Other " />
+        </Form.Item>
+        <Form.Item 
+        name='Last Visit'
+        label={<span style={{ fontWeight: "bold" }}>Last Visit</span>}>
+          <Input style={{width:'40%',background:'#C7C7C8'}} placeholder="Other " />
+        </Form.Item>
+        <Form.Item 
+        name='Your Location'
+        label={<span style={{ fontWeight: "bold" }}>Your Location</span>}>
+          <Input style={{width:'40%',background:'#C7C7C8'}} placeholder="Other " />
+        </Form.Item>
+
+      </Form>
+
+      <Form
         layout="vertical"
         form={form}
         onFinish={handleSubmit}
@@ -79,7 +111,7 @@ export default function CleanerForm({ houseId }) {
               <Checkbox.Group options={options} />
             </Form.Item>
             <Form.Item name="otherReason" label={<span>Other</span>}>
-              <Input placeholder="Other " />
+              <Input style={{width:'40%'}} placeholder="Other " />
             </Form.Item>
           </>
         ) : (
@@ -113,16 +145,20 @@ export default function CleanerForm({ houseId }) {
           </Upload>
         </Form.Item>
 
-        <Form.Item
+        {/* <Form.Item
           wrapperCol={{
             offset: 8,
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          
+        </Form.Item> */}
+        <Space style={{display:'flex',justifyContent:'flex-start',alignItems:'center',marginLeft: '0'}}>
+          <Button type="primary" htmlType="submit" >
             Submit
           </Button>
-        </Form.Item>
+          </Space>
+          <br />
       </Form>
     </div>
   );
