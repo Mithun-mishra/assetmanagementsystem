@@ -7,6 +7,7 @@ import NavTab from '../navbar';
 import DateAndTime from '../datatime';
 import { Divider } from 'antd';
 import QRscanner from '../QRscanner';
+import FormAfterScanning from './FormAfterScanning';
 
 export default function SupervisorDashboard() {
   return (
@@ -20,7 +21,8 @@ export default function SupervisorDashboard() {
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
 
-        < QRscanner />
+        <FormAfterScanning />
+        {/*         < QRscanner /> */}
         <br />
         <br />
         <br />

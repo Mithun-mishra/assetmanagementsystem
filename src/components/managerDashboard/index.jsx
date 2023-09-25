@@ -6,6 +6,8 @@ import FooterTab from '../footer';
 import NavTab from '../navbar';
 import { Divider } from 'antd';
 import DateAndTime from '../datatime';
+import DateAndTime from '../datatime';
+import { Divider } from 'antd';
 export default function ManagerDashboard() {
   return (
     <>
@@ -16,12 +18,21 @@ export default function ManagerDashboard() {
           <DateAndTime />
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
+        <div >
+          <DateAndTime />
+        </div>
+        <Divider />
+
+        <Typography>Location</Typography>
 
         <br />
         <br />
         <br />
         <br />
         <br />
+        <div>
+
+        </div>
         <FooterTab />
       </Container>
 
