@@ -1,38 +1,38 @@
 import React from 'react'
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function DateAndTime() {
-    const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(new Date());
 
-    useEffect(() => {
-      const timerID = setInterval(() => {
-        setCurrentDate(new Date());
-      }, 1000);
-  
-      return () => {
-        clearInterval(timerID);
-      };
-    }, []);
+  useEffect(() => {
+    const timerID = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 1000);
 
-    const getAmPm = (hours) => {
-      return hours >= 12 ? 'PM' : 'AM';
+    return () => {
+      clearInterval(timerID);
     };
-  
-    // Function to format the hours in 12-hour format
-    const formatHours = (hours) => {
-      return hours % 12 || 12; // Convert 0 to 12 for midnight
-    };
-  
-    const dateTimeStyle = {
-      textAlign: 'right',
-      display:"flex",
-      marginLeft:"40rem",
-      // Align content to the right
-    };
-    const paragraphStyle = {
-        fontWeight: 'bold', // Make text bold
-        padding: '10px', // Add padding around the paragraph
-      };
+  }, []);
+
+  const getAmPm = (hours) => {
+    return hours >= 12 ? 'PM' : 'AM';
+  };
+
+  // Function to format the hours in 12-hour format
+  const formatHours = (hours) => {
+    return hours % 12 || 12; // Convert 0 to 12 for midnight
+  };
+
+  const dateTimeStyle = {
+    textAlign: 'right',
+    display: "flex",
+    marginLeft: "40rem",
+    // Align content to the right
+  };
+  const paragraphStyle = {
+    fontWeight: 'bold', // Make text bold
+    padding: '10px', // Add padding around the paragraph
+  };
 
   return (
     <div style={dateTimeStyle}>
@@ -42,6 +42,6 @@ export default function DateAndTime() {
         {formatHours(currentDate.getHours())}:{currentDate.getMinutes()}:{currentDate.getSeconds()} {getAmPm(currentDate.getHours())}
       </p>
     </div>
-    
+
   )
 }
