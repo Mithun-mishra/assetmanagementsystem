@@ -21,11 +21,14 @@ export default function SupervisorDashboard() {
         <div>
           <DateAndTime />
         </div>
+
+
         <Divider style={{ border: "0.10px solid #C7C7C8" }} />
 
         <FormAfterScanning />
         <QRscanner />
         <br />
+
         <br />
         <br />
         <br />

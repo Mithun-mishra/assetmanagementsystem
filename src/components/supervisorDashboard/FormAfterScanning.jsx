@@ -1,34 +1,19 @@
 
 import React from 'react'
-import { Input } from 'antd';
 import { Typography, TextField } from '@mui/material'
 import { BoldOutlined } from '@ant-design/icons';
-
+import { Form, Button, Radio, Checkbox, Input, Upload , Space} from "antd";
 export default function FormAfterScanning() {
+  const [form] = Form.useForm();
+  const handleSubmit = async (values) => {
+    
+    console.log(values);
+  }
   return (
     <>
     <div>
-        <div>
-        <Typography fontWeight={"bold"}>
-        Asset ID 
-        </Typography>
-        <TextField disabled={true} value="HS0051143" />
-        {/* <Input disabled={true} value="HS0051143" /> */}
-        </div>
-        <div>
-        <Typography fontWeight={"bold"}>
-        Asset Address 
-        </Typography>
-        <TextField disabled={true} value="Z1-CMM-52-G-COMMON" />
-        {/* <Input disabled={true} value="HS0051143" /> */}
-        </div>
-        <div>
-        <Typography fontWeight={"bold"}>
-        Your Location
-        </Typography>
-        <TextField disabled={true} value="22.7868672,86.1667328" />
-        {/* <Input disabled={true} value="HS0051143" /> */}
-        </div>
+   
+        
 
     </div>
       

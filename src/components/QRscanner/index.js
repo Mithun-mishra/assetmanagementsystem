@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 import QrCodeScannerRoundedIcon from "@mui/icons-material/QrCodeScannerRounded";
 import CleanerForm from "./cleanerForm";
+import SupervisorForm from "./supervisorForm";
 
 export default function QRscanner() {
   const [result, setResult] = useState(undefined);
@@ -45,7 +46,8 @@ export default function QRscanner() {
     <>
       {result ? (
         <div style={{ width: "100%" }}>
-          <CleanerForm houseId={result} />
+          {/* <CleanerForm houseId={result} /> */}
+          <SupervisorForm houseId={result} />
         </div>
       ) : (
         <div
