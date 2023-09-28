@@ -70,7 +70,7 @@ export default function NavTab() {
     <>
    
       <div style={styles.divider}>
-      <Navbar userRole={"supervisor"} />
+      <Navbar userRole={"manager"} />
 
         {/* <div style={styles.navContainer}>
       <Navbar userRole={"manager"} />
