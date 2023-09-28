@@ -1,11 +1,12 @@
 import React from 'react'
 import { styles } from './styles'
 import { Typography } from '@mui/material'
+import { Divider } from 'antd';
 import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import NavTab from '../navbar';
-import { Divider } from 'antd';
 import DateAndTime from '../datatime';
+import GridReport from '../Page/Grid Report';
 export default function ManagerDashboard() {
   return (
     <>
@@ -16,19 +17,15 @@ export default function ManagerDashboard() {
           <DateAndTime />
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
-
-
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div>
-
         </div>
+        <br />
+        <br />
+        <br />
         <FooterTab />
       </Container>
+      <GridReport />
+
 
     </>
   )
