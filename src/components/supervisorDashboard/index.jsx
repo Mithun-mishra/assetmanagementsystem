@@ -22,7 +22,7 @@ export default function SupervisorDashboard() {
         <Divider />
         
      <FormAfterScanning/>
-{/* < QRscanner/> */}
+< QRscanner/>
      <br />
         <br />
         <br />
