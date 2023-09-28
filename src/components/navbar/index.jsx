@@ -71,6 +71,9 @@ export default function NavTab() {
    
       <div style={styles.divider}>
       <Navbar userRole={"supervisor"} />
+
+        {/* <div style={styles.navContainer}>
+      <Navbar userRole={"manager"} />
       {/* <div style={styles.navContainer}>
     <Button style={styles.navbtn}>Grid Report</Button>
     <Button style={styles.navbtn}>History</Button>
