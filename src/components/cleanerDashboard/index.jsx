@@ -12,19 +12,23 @@ export default function CleanerDashboard() {
   return (
     <>
       <Container maxWidth="sm" sx={styles.container}>
-        <Typography sx={styles.head}>
-          Asset Management System - Kalinganagar{" "}
-        </Typography>
+        <Typography sx={styles.head}>Asset Management System - Kalinganagar </Typography>
 
         <NavTab />
-        <div>
+        <div >
           <DateAndTime />
         </div>
         <Divider />
 
-        <QRscanner />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <FooterTab />
       </Container>
+
     </>
   );
 }
