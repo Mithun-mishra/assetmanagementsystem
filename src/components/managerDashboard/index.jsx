@@ -17,14 +17,13 @@ export default function ManagerDashboard() {
           <DateAndTime />
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
-        <div>
-        </div>
+      <GridReport />
+        
         <br />
         <br />
         <br />
         <FooterTab />
       </Container>
-      <GridReport />
 
 
     </>

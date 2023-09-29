@@ -1,23 +1,25 @@
 import React from "react";
 import { Form, Select, Table } from "antd";
+import { styles } from "./styles";
 const { Option } = Select;
+
 
 const GridReport = () => {
 
     //Yeh Form Part Hai
     const selectStyle = {
-        width: "70%"
+        minWidth: "95%"
     };
 
     const formItemStyle = {
         marginBottom: "0px",
         fontSize: "15px",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        // minWidth :'2rem'
     };
 
     const divStyle = {
         flex: "1",
-        marginLeft: "50px",
     };
 
     //Yeh Table Part Hai
@@ -120,12 +122,13 @@ const GridReport = () => {
     });
 
     return (
-        <>
+        <> 
+        <div style={{minWidth:'100%'}}>
             <Form
                 style={{
                     display: "flex",
                     flexDirection: "row",
-                    // justifyContent: "center",
+                    justifyContent: "space",
                 }}
             >
                 <div style={divStyle}>
@@ -191,6 +194,8 @@ const GridReport = () => {
                     </Select>
                 </div>
             </Form>
+            </div>
+            <div style={{minWidth:'100%'}}>
             <Table
                 // dataSource={data}
                 dataSource={[...data, grandTotal]}
@@ -199,6 +204,7 @@ const GridReport = () => {
                 // footer={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>GrandTotal:</span>}
                 pagination={false}
             />
+            </div>
         </>
     );
 };
