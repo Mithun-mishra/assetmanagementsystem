@@ -4,6 +4,8 @@ import { Typography } from '@mui/material'
 import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import { Button } from '@mui/material';
+import {  Select } from "antd";
+const { Option } = Select;
 
 
 
@@ -50,6 +52,25 @@ const Navbar = ({ userRole }) => {
           </div>
 
         );
+
+        case 'admin':
+          return (
+            <div style={styles.navContainer}>
+              <div>
+                <Button style={styles.navbtn}>Users</Button>
+                {/* <Select placeholder="User Mapping" allowClear style={{backgroundcolor: "blue",color: "black",fontSize:"0.8rem", textTransform: "none"}} > */}
+                <Button style={styles.navbtn}> UserMapping
+                        <Option value="all">List</Option>
+                        <Option value="all">Add/Edit</Option>
+                        </Button>
+                    {/* </Select> */}
+                
+              </div>
+              <Button style={styles.navbtn}>Logout</Button>
+            </div>
+  
+          );
+
       default:
         return null;
     }
@@ -70,8 +91,11 @@ export default function NavTab() {
   return (
     <>
 
-      <div style={styles.divider}>
-        <Navbar userRole={"manager"} />
+      <div style={styles.divider}> 
+        <Navbar userRole={"admin"} />
+        {/* <div style={styles.navContainer}>
+      <Navbar userRole={"manager"} />
+
         {/* <div style={styles.navContainer}>
       <Navbar userRole={"manager"} />
       {/* <div style={styles.navContainer}>

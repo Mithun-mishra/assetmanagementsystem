@@ -1,12 +1,9 @@
-import React from "react";
-import { Form, Select, Table } from "antd";
+import React from 'react'
+import { Button, Form, Select, Table } from "antd";
 // import { styles } from "./styles";
 const { Option } = Select;
 
-
-const GridReport = () => {
-
-    //Yeh Form Part Hai
+export default function Lists() {
     const selectStyle = {
         minWidth: "95%"
     };
@@ -83,47 +80,46 @@ const GridReport = () => {
             dataIndex: 'name',
             key: 'name',
         },
+        // {
+        //     title: <span style={{ fontWeight: 'bold' }}>Total</span>,
+        //     dataIndex: 'total',
+        //     key: 'total',
+        // },
+        // {
+        //     title: <span style={{ fontWeight: 'bold' }}>Active</span>,
+        //     dataIndex: 'active',
+        //     key: 'active',
+        // },
+        // {
+        //     title: <span style={{ fontWeight: 'bold' }}>Inactive</span>,
+        //     dataIndex: 'inactive',
+        //     key: 'inactive',
+        // },
         {
-            title: <span style={{ fontWeight: 'bold' }}>Total</span>,
-            dataIndex: 'total',
-            key: 'total',
-        },
-        {
-            title: <span style={{ fontWeight: 'bold' }}>Active</span>,
-            dataIndex: 'active',
-            key: 'active',
-        },
-        {
-            title: <span style={{ fontWeight: 'bold' }}>Inactive</span>,
-            dataIndex: 'inactive',
-            key: 'inactive',
-        },
-        {
-            title: <span style={{ fontWeight: 'bold' }}>Pending</span>,
-            dataIndex: 'pending',
-            key: 'pending',
+            title: <span style={{ fontWeight: 'bold' }}>Zone_Toilet</span>,
+            dataIndex: 'zonetoilet',
+            key: 'zonetoilet',
         },
     ];
 
-    const grandTotal = {
-        key: "grandTotal",
-        serial: <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Total:</span>,
-        total: 0,
-        active: 0,
-        inactive: 0,
-        pending: 0,
-    };
+    // const grandTotal = {
+    //     key: "grandTotal",
+    //     serial: <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Total:</span>,
+    //     total: 0,
+    //     active: 0,
+    //     inactive: 0,
+    //     pending: 0,
+    // };
 
-    data.forEach((item) => {
-        grandTotal.total += item.total;
-        grandTotal.active += item.active;
-        grandTotal.inactive += item.inactive;
-        grandTotal.pending += item.pending;
-    });
-
-    return (
-        <> 
-        <div style={{minWidth:'100%'}}>
+    // data.forEach((item) => {
+    //     grandTotal.total += item.total;
+    //     grandTotal.active += item.active;
+    //     grandTotal.inactive += item.inactive;
+    //     grandTotal.pending += item.pending;
+    // });
+  return (
+    <>
+     <div style={{minWidth:'100%'}}>
             <Form
                 style={{
                     display: "flex",
@@ -139,7 +135,7 @@ const GridReport = () => {
                         style={formItemStyle}
                     />
                     <Select placeholder="Area" allowClear style={selectStyle}>
-                        <Option value="jamshedpur">Jamshedpur</Option>
+                        <Option disabled='true' value="kalinganager">Kalinganager</Option>
                     </Select>
                 </div>
                 <div style={divStyle}>
@@ -150,49 +146,20 @@ const GridReport = () => {
                         style={formItemStyle}
                     />
                     <Select placeholder="Units" allowClear style={selectStyle}>
-                        <Option value="all">All</Option>
-                        <Option value="jamshedpur">Jamshedpur</Option>
+                        <Option value="all">TSK Inside Plant</Option>
+                        <Option value="jamshedpur">PHC Township</Option>
                     </Select>
                 </div>
                 <div style={divStyle}>
                     <Form.Item
-                        label="Zone"
-                        name="zone"
+                        label="Units"
+                        name="units"
                         colon={false}
                         style={formItemStyle}
                     />
-                    <Select placeholder="Zone" allowClear style={selectStyle}>
-                        <Option value="all">All</Option>
-                        <Option value="east">East</Option>
-                        <Option value="west">West</Option>
-                    </Select>
-                </div>
-                <div style={divStyle}>
-                    <Form.Item
-                        label="Area"
-                        name="area"
-                        colon={false}
-                        style={formItemStyle}
-                    />
-                    <Select placeholder="Area" allowClear style={selectStyle}>
-                        <Option value="all">All</Option>
-                        <Option value="auction yard">Auction Yard</Option>
-                        <Option value="csd">CSD</Option>
-                        <Option value="emy">EMY</Option>
-                        <Option value="loco loco">Loco Loco</Option>
-                    </Select>
-                </div>
-                <div style={divStyle}>
-                    <Form.Item
-                        label="Locality"
-                        name="locality"
-                        colon={false}
-                        style={formItemStyle}
-                    />
-                    <Select placeholder="Locality" allowClear style={selectStyle}>
-                        <Option value="all">All</Option>
-                    </Select>
-                </div>
+                    <Button>Search</Button>
+                    </div>
+                
             </Form>
             </div>
             <div style={{minWidth:'100%'}}>
@@ -200,13 +167,12 @@ const GridReport = () => {
                 // dataSource={data}
                 dataSource={[...data, grandTotal]}
                 columns={columns}
-                title={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Unit wise view</span>}
+                // title={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Unit wise view</span>}
                 // footer={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>GrandTotal:</span>}
                 pagination={false}
             />
             </div>
-        </>
-    );
-};
-
-export default GridReport;
+      
+    </>
+  )
+}

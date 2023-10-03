@@ -11,6 +11,8 @@ import DateAndTime from '../datatime';
 // import Reports from '../Page/Reports';
 // import FeedbackReports from '../Page/Feedback Reports';
 import PerformanceReport from '../Page/Performance Report';
+import ToiletList from '../Page/ToiletList';
+import UserList from '../Page/UserList';
 export default function ManagerDashboard() {
   return (
     <>
@@ -21,13 +23,16 @@ export default function ManagerDashboard() {
           <DateAndTime />
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
+
         <div>
           {/* <GridReport /> */}
           {/* <History /> */}
           {/* <Reports /> */}
           {/* <FeedbackReports /> */}
           <PerformanceReport />
-        </div>
+        {/* <ToiletList/> */}
+ <UserList/>
+            </div>
         <br />
         <br />
         <br />
