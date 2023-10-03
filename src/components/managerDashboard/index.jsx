@@ -6,7 +6,11 @@ import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import NavTab from '../navbar';
 import DateAndTime from '../datatime';
-import GridReport from '../Page/Grid Report';
+// import GridReport from '../Page/Grid Report';
+// import History from '../Page/History/Index';
+// import Reports from '../Page/Reports';
+// import FeedbackReports from '../Page/Feedback Reports';
+import PerformanceReport from '../Page/Performance Report';
 import ToiletList from '../Page/ToiletList';
 import UserList from '../Page/UserList';
 export default function ManagerDashboard() {
@@ -19,9 +23,16 @@ export default function ManagerDashboard() {
           <DateAndTime />
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
-      {/* <GridReport /> */}
+
+        <div>
+          {/* <GridReport /> */}
+          {/* <History /> */}
+          {/* <Reports /> */}
+          {/* <FeedbackReports /> */}
+          <PerformanceReport />
         {/* <ToiletList/> */}
-        <UserList/>
+ <UserList/>
+            </div>
         <br />
         <br />
         <br />
