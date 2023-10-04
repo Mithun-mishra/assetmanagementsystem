@@ -10,9 +10,10 @@ import DateAndTime from '../datatime';
 // import History from '../Page/History/Index';
 // import Reports from '../Page/Reports';
 // import FeedbackReports from '../Page/Feedback Reports';
-import PerformanceReport from '../Page/Performance Report';
-import ToiletList from '../Page/ToiletList';
-import UserList from '../Page/UserList';
+// import PerformanceReport from '../Page/Performance Report';
+import GoogleMap from '../Page/Google Map';
+// import ToiletList from '../Page/ToiletList';
+// import UserList from '../Page/UserList';
 export default function ManagerDashboard() {
   return (
     <>
@@ -29,10 +30,11 @@ export default function ManagerDashboard() {
           {/* <History /> */}
           {/* <Reports /> */}
           {/* <FeedbackReports /> */}
-          <PerformanceReport />
-        {/* <ToiletList/> */}
- <UserList/>
-            </div>
+          {/* <PerformanceReport /> */}
+          <GoogleMap />
+          {/* <ToiletList/> */}
+          {/* <UserList/> */}
+        </div>
         <br />
         <br />
         <br />
