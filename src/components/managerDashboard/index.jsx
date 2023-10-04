@@ -29,8 +29,8 @@ export default function ManagerDashboard() {
 
         <div style={{width:'100%'}}>
           {/* <GridReport /> */}
-          {/* <History /> */}
-          <Reports />
+          <History />
+          {/* <Reports /> */}
           {/* <FeedbackReports /> */}
           {/* <PerformanceReport /> */}
           {/* <ToiletList/> */}
