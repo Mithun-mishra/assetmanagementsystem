@@ -30,7 +30,7 @@ export default function ManagerDashboard() {
 
         <div style={{ width: '100%' }}>
           {/* <GridReport /> */}
-          <History />
+          {/* <History /> */}
           {/* <Reports /> */}
           {/* <FeedbackReports /> */}
           {/* <PerformanceReport /> */}
