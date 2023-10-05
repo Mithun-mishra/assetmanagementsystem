@@ -87,8 +87,10 @@ const Navbar = ({ userRole }) => {
               </div>
               <Button style={styles.navbtn}>Logout</Button>
             </div>
-  
-          );
+            <Button style={styles.navbtn}>Logout</Button>
+          </div>
+
+        );
 
       default:
         return null;
@@ -110,8 +112,8 @@ export default function NavTab() {
   return (
     <>
 
-      <div style={styles.divider}> 
-        <Navbar userRole={"admin"} />
+      <div style={styles.divider}>
+        <Navbar userRole={"manager"} />
         {/* <div style={styles.navContainer}>
       <Navbar userRole={"manager"} />
 
