@@ -6,22 +6,20 @@ import FooterTab from "../footer";
 import NavTab from "../navbar";
 import DateAndTime from "../datatime";
 import { Divider } from "antd";
-import GridReport from '../Page/Grid Report';
+import Lists from './components/Lists';
 
 
 export default function AdminDashboard() {
   return (
     <>
-     <Container maxWidth="sm" sx={styles.container}>
+      <Container maxWidth="sm" sx={styles.container}>
         <Typography sx={styles.head}>Asset Management System - Kalinganagar </Typography>
-
         <NavTab />
         <div >
           <DateAndTime />
         </div>
         <Divider />
-        <GridReport/>
-
+        <Lists />
         <br />
         <br />
         <br />
@@ -29,7 +27,7 @@ export default function AdminDashboard() {
         <br />
         <FooterTab />
       </Container>
-      
+
     </>
   )
 }

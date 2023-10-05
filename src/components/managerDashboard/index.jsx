@@ -25,7 +25,7 @@ export default function ManagerDashboard() {
         </div>
         <Divider style={{ border: '0.10px solid #C7C7C8' }} />
 
-        <div>
+        <div style={{ width: '100%' }}>
           {/* <GridReport /> */}
           {/* <History /> */}
           {/* <Reports /> */}

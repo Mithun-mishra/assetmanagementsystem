@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "New Delhi",
+    "lat": 28.6139,
+    "lng": 77.8567
+  },
+  {
+    "id": 2,
+    "name": "Mumbai",
+    "lat": 18.5204,
+    "lng": 73.8567
+  },
+  {
+    "id": 3,
+    "name": "Bangalore",
+    "lat": 12.9716,
+    "lng": 77.5946
+  },
+  {
+    "id": 4,
+    "name": "Kolkata",
+    "lat": 22.5726,
+    "lng": 88.3639
+  },
+  {
+    "id": 5,
+    "name": "Chennai",
+    "lat": 13.0827,
+    "lng": 80.2707
+  },
+  {
+    "id": 6,
+    "name": "Hyderabad",
+    "lat": 17.385,
+    "lng": 78.4867
+  },
+  {
+    "id": 7,
+    "name": "Varanasi",
+    "lat": 25.276987,
+    "lng": 82.983462
+  },
+  {
+    "id": 8,
+    "name": "Chandigarh",
+    "lat": 29.8652,
+    "lng": 77.8961
+  },
+  {
+    "id": 9,
+    "name": "Jaipur",
+    "lat": 26.9124,
+    "lng": 75.7873
+  },
+  {
+    "id": 10,
+    "name": "Bhopal",
+    "lat": 23.9124,
+    "lng": 77.4126
+  },
+  {
+    "id": 11,
+    "name": "Pune",
+    "lat": 18.5204,
+    "lng": 73.8567
+  },
+  {
+    "id": 12,
+    "name": "Agra",
+    "lat": 27.1767,
+    "lng": 78.0081
+  },
+  {
+    "id": 13,
+    "name": "Goa",
+    "lat": 15.2993,
+    "lng": 74.124
+  },
+  {
+    "id": 14,
+    "name": "Lucknow",
+    "lat": 26.8467,
+    "lng": 80.9462
+  },
+  {
+    "id": 15,
+    "name": "Ahmedabad",
+    "lat": 23.0225,
+    "lng": 72.5714
+  },
+  {
+    "id": 16,
+    "name": "Kochi (Cochin)",
+    "lat": 9.9312,
+    "lng": 76.2673
+  },
+  {
+    "id": 17,
+    "name": "Amritsar",
+    "lat": 31.634,
+    "lng": 74.8737
+  },
+  {
+    "id": 18,
+    "name": "Mysore",
+    "lat": 12.2958,
+    "lng": 76.6394
+  },
+  {
+    "id": 19,
+    "name": "Kanpur",
+    "lat": 26.4499,
+    "lng": 80.3319
+  },
+  {
+    "id": 20,
+    "name": "Shimla",
+    "lat": 31.1048,
+    "lng": 77.1734
+  }
+]

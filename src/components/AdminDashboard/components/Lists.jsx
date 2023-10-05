@@ -80,21 +80,21 @@ export default function Lists() {
             dataIndex: 'name',
             key: 'name',
         },
-        // {
-        //     title: <span style={{ fontWeight: 'bold' }}>Total</span>,
-        //     dataIndex: 'total',
-        //     key: 'total',
-        // },
-        // {
-        //     title: <span style={{ fontWeight: 'bold' }}>Active</span>,
-        //     dataIndex: 'active',
-        //     key: 'active',
-        // },
-        // {
-        //     title: <span style={{ fontWeight: 'bold' }}>Inactive</span>,
-        //     dataIndex: 'inactive',
-        //     key: 'inactive',
-        // },
+        {
+            title: <span style={{ fontWeight: 'bold' }}>Total</span>,
+            dataIndex: 'total',
+            key: 'total',
+        },
+        {
+            title: <span style={{ fontWeight: 'bold' }}>Active</span>,
+            dataIndex: 'active',
+            key: 'active',
+        },
+        {
+            title: <span style={{ fontWeight: 'bold' }}>Inactive</span>,
+            dataIndex: 'inactive',
+            key: 'inactive',
+        },
         {
             title: <span style={{ fontWeight: 'bold' }}>Zone_Toilet</span>,
             dataIndex: 'zonetoilet',
@@ -102,77 +102,77 @@ export default function Lists() {
         },
     ];
 
-    // const grandTotal = {
-    //     key: "grandTotal",
-    //     serial: <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Total:</span>,
-    //     total: 0,
-    //     active: 0,
-    //     inactive: 0,
-    //     pending: 0,
-    // };
+    const grandTotal = {
+        key: "grandTotal",
+        serial: <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Total:</span>,
+        total: 0,
+        active: 0,
+        inactive: 0,
+        pending: 0,
+    };
 
-    // data.forEach((item) => {
-    //     grandTotal.total += item.total;
-    //     grandTotal.active += item.active;
-    //     grandTotal.inactive += item.inactive;
-    //     grandTotal.pending += item.pending;
-    // });
-  return (
-    <>
-     <div style={{minWidth:'100%'}}>
-            <Form
-                style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space",
-                }}
-            >
-                <div style={divStyle}>
-                    <Form.Item
-                        label="Location"
-                        name="location"
-                        colon={false}
-                        style={formItemStyle}
-                    />
-                    <Select placeholder="Area" allowClear style={selectStyle}>
-                        <Option disabled='true' value="kalinganager">Kalinganager</Option>
-                    </Select>
-                </div>
-                <div style={divStyle}>
-                    <Form.Item
-                        label="Units"
-                        name="units"
-                        colon={false}
-                        style={formItemStyle}
-                    />
-                    <Select placeholder="Units" allowClear style={selectStyle}>
-                        <Option value="all">TSK Inside Plant</Option>
-                        <Option value="jamshedpur">PHC Township</Option>
-                    </Select>
-                </div>
-                <div style={divStyle}>
-                    <Form.Item
-                        label="Units"
-                        name="units"
-                        colon={false}
-                        style={formItemStyle}
-                    />
-                    <Button>Search</Button>
+    data.forEach((item) => {
+        grandTotal.total += item.total;
+        grandTotal.active += item.active;
+        grandTotal.inactive += item.inactive;
+        grandTotal.pending += item.pending;
+    });
+    return (
+        <>
+            <div style={{ minWidth: '100%' }}>
+                <Form
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space",
+                    }}
+                >
+                    <div style={divStyle}>
+                        <Form.Item
+                            label="Location"
+                            name="location"
+                            colon={false}
+                            style={formItemStyle}
+                        />
+                        <Select placeholder="Area" allowClear style={selectStyle}>
+                            <Option disabled='true' value="kalinganager">Kalinganager</Option>
+                        </Select>
                     </div>
-                
-            </Form>
+                    <div style={divStyle}>
+                        <Form.Item
+                            label="Units"
+                            name="units"
+                            colon={false}
+                            style={formItemStyle}
+                        />
+                        <Select placeholder="Units" allowClear style={selectStyle}>
+                            <Option value="all">TSK Inside Plant</Option>
+                            <Option value="jamshedpur">PHC Township</Option>
+                        </Select>
+                    </div>
+                    <div style={divStyle}>
+                        <Form.Item
+                            label="Units"
+                            name="units"
+                            colon={false}
+                            style={formItemStyle}
+                        />
+                        <Button>Search</Button>
+                    </div>
+
+                </Form>
             </div>
-            <div style={{minWidth:'100%'}}>
-            <Table
-                // dataSource={data}
-                dataSource={[...data, grandTotal]}
-                columns={columns}
-                // title={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Unit wise view</span>}
-                // footer={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>GrandTotal:</span>}
-                pagination={false}
-            />
+            <div style={{ minWidth: '100%' }}>
+                <Table
+                    // dataSource={data}
+                    dataSource={[...data, grandTotal]}
+                    columns={columns}
+                    title={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Unit wise view</span>}
+                    // footer={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>GrandTotal:</span>}
+                    pagination={false}
+                />
             </div>
-      
-    </>
-  )
+
+        </>
+    )
 }
