@@ -58,34 +58,32 @@ const Navbar = ({ userRole }) => {
 
         );
 
-        case 'admin':
-          return (
-            <div style={styles.navContainer}>
-              <div>
-                <Button style={styles.navbtn}>Users</Button>
-                <Button style={styles.navbtn}>
-                <FormControl style={{width:'150px',border:'none'}}>
-                <InputLabel id="demo-simple-select-label" style={styles.navbtn}>User Mapping</InputLabel>
-                <Select
-                 
-                label="User Mapping"
-                
-                >
-              <MenuItem >List</MenuItem>
-              <MenuItem >Add/Edit</MenuItem>
-              
-            </Select>
-            </FormControl>
-            </Button>
-                {/* <Select placeholder="User Mapping" allowClear style={{backgroundcolor: "blue",color: "black",fontSize:"0.8rem", textTransform: "none"}} >
+      case 'admin':
+        return (
+          <div style={styles.navContainer}>
+            <div>
+              <Button style={styles.navbtn}>Users</Button>
+              <Button style={styles.navbtn}>
+                <FormControl style={{ width: '150px', border: 'none' }}>
+                  <InputLabel id="demo-simple-select-label" style={styles.navbtn}>User Mapping</InputLabel>
+                  <Select
+
+                    label="User Mapping"
+
+                  >
+                    <MenuItem >List</MenuItem>
+                    <MenuItem >Add/Edit</MenuItem>
+
+                  </Select>
+                </FormControl>
+              </Button>
+              {/* <Select placeholder="User Mapping" allowClear style={{backgroundcolor: "blue",color: "black",fontSize:"0.8rem", textTransform: "none"}} >
                
                         <Option value="all">List</Option>
                         <Option value="all">Add/Edit</Option>
                         
                     </Select> */}
-                
-              </div>
-              <Button style={styles.navbtn}>Logout</Button>
+
             </div>
             <Button style={styles.navbtn}>Logout</Button>
           </div>
