@@ -50,7 +50,8 @@ navbtn:{
     backgroundcolor: "white",
      color: "white",
      fontSize:"0.8rem", 
-     textTransform: "none"
+     textTransform: "none",
+    
 },
 innernav:{
     minWidth:"100%",

@@ -4,7 +4,12 @@ import { Typography } from '@mui/material'
 import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import { Button } from '@mui/material';
-import { Select } from "antd";
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
+
+import Select from '@mui/material/Select';
+// import {  Select } from "antd";
 const { Option } = Select;
 
 
@@ -53,18 +58,34 @@ const Navbar = ({ userRole }) => {
 
         );
 
-      case 'admin':
-        return (
-          <div style={styles.navContainer}>
-            <div>
-              <Button style={styles.navbtn}>Users</Button>
-              {/* <Select placeholder="User Mapping" allowClear style={{backgroundcolor: "blue",color: "black",fontSize:"0.8rem", textTransform: "none"}} > */}
-              <Button style={styles.navbtn}> UserMapping
-                <Option value="all">List</Option>
-                <Option value="all">Add/Edit</Option>
-              </Button>
-              {/* </Select> */}
-
+        case 'admin':
+          return (
+            <div style={styles.navContainer}>
+              <div>
+                <Button style={styles.navbtn}>Users</Button>
+                <Button style={styles.navbtn}>
+                <FormControl style={{width:'150px',border:'none'}}>
+                <InputLabel id="demo-simple-select-label" style={styles.navbtn}>User Mapping</InputLabel>
+                <Select
+                 
+                label="User Mapping"
+                
+                >
+              <MenuItem >List</MenuItem>
+              <MenuItem >Add/Edit</MenuItem>
+              
+            </Select>
+            </FormControl>
+            </Button>
+                {/* <Select placeholder="User Mapping" allowClear style={{backgroundcolor: "blue",color: "black",fontSize:"0.8rem", textTransform: "none"}} >
+               
+                        <Option value="all">List</Option>
+                        <Option value="all">Add/Edit</Option>
+                        
+                    </Select> */}
+                
+              </div>
+              <Button style={styles.navbtn}>Logout</Button>
             </div>
             <Button style={styles.navbtn}>Logout</Button>
           </div>

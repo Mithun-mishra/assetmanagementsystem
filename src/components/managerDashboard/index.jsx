@@ -14,34 +14,36 @@ import DateAndTime from '../datatime';
 import GoogleMap from '../Page/Google Map';
 // import ToiletList from '../Page/ToiletList';
 // import UserList from '../Page/UserList';
+
 export default function ManagerDashboard() {
   return (
     <>
       <Container maxWidth="sm" sx={styles.container}>
-        <Typography sx={styles.head}>Asset Management System - Kalinganagar </Typography>
+        <Typography sx={styles.head}>
+          Asset Management System - Kalinganagar
+        </Typography>
         <NavTab />
-        <div >
+        <div>
           <DateAndTime />
         </div>
-        <Divider style={{ border: '0.10px solid #C7C7C8' }} />
+        <Divider style={{ border: "0.10px solid #C7C7C8" }} />
 
         <div style={{ width: '100%' }}>
           {/* <GridReport /> */}
-          {/* <History /> */}
+          <History />
           {/* <Reports /> */}
           {/* <FeedbackReports /> */}
           {/* <PerformanceReport /> */}
           <GoogleMap />
           {/* <ToiletList/> */}
           {/* <UserList/> */}
+
         </div>
         <br />
         <br />
         <br />
         <FooterTab />
       </Container>
-
-
     </>
-  )
+  );
 }
