@@ -84,21 +84,33 @@ function History() {
             title: <span style={{ fontWeight: 'bold' }}>Total</span>,
             dataIndex: 'total',
             key: 'total',
+            render: (text, record) => (
+                <span style={{ fontWeight: record.key === "grandTotal" ? 'bold' : 'normal' }}>{text}</span>
+            ),
         },
         {
             title: <span style={{ fontWeight: 'bold' }}>Active</span>,
             dataIndex: 'active',
             key: 'active',
+            render: (text, record) => (
+                <span style={{ fontWeight: record.key === "grandTotal" ? 'bold' : 'normal' }}>{text}</span>
+            ),
         },
         {
             title: <span style={{ fontWeight: 'bold' }}>Inactive</span>,
             dataIndex: 'inactive',
             key: 'inactive',
+            render: (text, record) => (
+                <span style={{ fontWeight: record.key === "grandTotal" ? 'bold' : 'normal' }}>{text}</span>
+            ),
         },
         {
             title: <span style={{ fontWeight: 'bold' }}>Pending</span>,
             dataIndex: 'pending',
             key: 'pending',
+            render: (text, record) => (
+                <span style={{ fontWeight: record.key === "grandTotal" ? 'bold' : 'normal' }}>{text}</span>
+            ),
         },
     ];
 

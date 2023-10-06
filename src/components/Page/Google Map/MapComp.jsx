@@ -22,7 +22,7 @@ const MapComp = ({ locations }) => {
     return isLoaded ?
         <GoogleMap
             mapContainerStyle={mapStyles}
-            zoom={5}
+            zoom={14}
             center={defaultCenter}
         >
             {locations.map((location, index) => (

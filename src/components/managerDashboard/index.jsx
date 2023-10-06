@@ -11,7 +11,10 @@ import DateAndTime from '../datatime';
 // import Reports from '../Page/Reports';
 // import FeedbackReports from '../Page/Feedback Reports';
 // import PerformanceReport from '../Page/Performance Report';
-import GoogleMap from '../Page/Google Map';
+// import GoogleMap from '../Page/Google Map';
+// import ChangeFrequency from '../Page/Change Frequency';
+// import FrequencyList from '../Page/Frequency List';
+import AssetStatus from '../Page/Asset Status';
 // import ToiletList from '../Page/ToiletList';
 // import UserList from '../Page/UserList';
 
@@ -34,7 +37,10 @@ export default function ManagerDashboard() {
           {/* <Reports /> */}
           {/* <FeedbackReports /> */}
           {/* <PerformanceReport /> */}
-          <GoogleMap />
+          {/* <GoogleMap /> */}
+          {/* <ChangeFrequency /> */}
+          {/* <FrequencyList /> */}
+          <AssetStatus />
           {/* <ToiletList/> */}
           {/* <UserList/> */}
 
