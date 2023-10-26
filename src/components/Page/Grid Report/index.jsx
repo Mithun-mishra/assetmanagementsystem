@@ -138,8 +138,8 @@ const GridReport = () => {
                         colon={false}
                         style={formItemStyle}
                     />
-                    <Select placeholder="Area" allowClear style={selectStyle}>
-                        <Option value="jamshedpur">Jamshedpur</Option>
+                    <Select placeholder="Area"  allowClear  style={selectStyle}>
+                        <Option  value="jamshedpur">Jamshedpur</Option>
                     </Select>
                 </div>
                 <div style={divStyle}>
