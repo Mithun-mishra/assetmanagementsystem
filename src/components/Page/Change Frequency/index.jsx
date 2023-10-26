@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react';
 import { Form, Select, Table } from "antd";
-import { styles } from "./styles";
 const { Option } = Select;
 
-
-const GridReport = () => {
+function ChangeFrequency() {
 
     //Yeh Form Part Hai
     const selectStyle = {
@@ -150,8 +148,8 @@ const GridReport = () => {
                             colon={false}
                             style={formItemStyle}
                         />
-                        <Select placeholder="Area"  allowClear  style={selectStyle}>
-                            <Option  value="jamshedpur">Jamshedpur</Option>
+                        <Select placeholder="Area" allowClear style={selectStyle}>
+                            <Option value="jamshedpur">Jamshedpur</Option>
                         </Select>
                     </div>
                     <div style={divStyle}>
@@ -212,7 +210,16 @@ const GridReport = () => {
                     // dataSource={data}
                     dataSource={[...data, grandTotal]}
                     columns={columns}
-                    title={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Unit wise view</span>}
+                    title={() => (
+                        <div>
+                            <span style={{ fontWeight: 'bold', fontSize: '15px', float: "left" }}>
+                                Zone : Area :
+                            </span>
+                            <br />
+                            <br />
+                            <span style={{ fontWeight: 'bold', fontSize: '15px' }}>Locality wise view</span>
+                        </div>
+                    )}
                     // footer={() => <span style={{ fontWeight: 'bold', fontSize: '15px' }}>GrandTotal:</span>}
                     pagination={false}
                 />
@@ -221,4 +228,4 @@ const GridReport = () => {
     );
 };
 
-export default GridReport;
+export default ChangeFrequency;

@@ -6,37 +6,24 @@ import Container from '@mui/material/Container';
 import FooterTab from '../footer';
 import NavTab from '../navbar';
 import DateAndTime from '../datatime';
-// import GridReport from '../Page/Grid Report';
-// import History from '../Page/History/Index';
-// import Reports from '../Page/Reports';
-// import FeedbackReports from '../Page/Feedback Reports';
-// import PerformanceReport from '../Page/Performance Report';
-import GoogleMap from '../Page/Google Map';
-// import ToiletList from '../Page/ToiletList';
-// import UserList from '../Page/UserList';
 
-export default function ManagerDashboard() {
+const ManagerDashboard = ({ userRole }) => {
+
   return (
     <>
       <Container maxWidth="sm" sx={styles.container}>
         <Typography sx={styles.head}>
           Asset Management System - Kalinganagar
         </Typography>
-        <NavTab />
         <div>
           <DateAndTime />
         </div>
         <Divider style={{ border: "0.10px solid #C7C7C8" }} />
 
         <div style={{ width: '100%' }}>
-          {/* <GridReport /> */}
-          {/* <History /> */}
-          {/* <Reports /> */}
-          {/* <FeedbackReports /> */}
-          {/* <PerformanceReport /> */}
-          <GoogleMap />
-          {/* <ToiletList/> */}
-          {/* <UserList/> */}
+          <NavTab userRole={userRole} />
+
+
 
         </div>
         <br />
@@ -46,4 +33,5 @@ export default function ManagerDashboard() {
       </Container>
     </>
   );
-}
+};
+export default ManagerDashboard;
